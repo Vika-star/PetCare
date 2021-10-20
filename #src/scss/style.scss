@@ -1,0 +1,120 @@
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+/*==========================================*/
+
+$minwidth: 320px;
+$mw:1440;
+$md1:$mw+12;
+$md2:991.98;
+$md3:767.98;
+$md4:479.98;
+
+/*==========================================*/
+html, body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    color:#fff;
+    background: #262628;
+    font-size: 21px;
+    font-family: 'NotoSans';
+    font-weight: 400;
+}
+body._lock{
+    overflow: hidden;
+    @media (max-width: $md3+px) {
+    }
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style-type:none;
+    padding: 0;
+}
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+/*==========================================*/
+
+._container {
+    max-width: $mw+px;
+    margin: 0 auto;
+    @include small-desktop-min{
+        padding: 0 30px;
+    }
+    @include small-tablet{
+        max-width: none;
+        padding: 0 25px;
+    }
+}
+// ===========================================================
+.text {
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: normal;
+    line-height: calc(27 / 18 * 100%);
+    
+    color: rgba(255, 255, 255, 0.6);
+}
+.btn {
+    background: #D23166;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 13px 50px;
+
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: calc(22 / 16 * 100%);
+    color: #FAFAFA;
+    transition: background 0.3s ease 0s;
+    @media (min-width:992px) {
+        &:hover{
+            background-color: #d00045;
+        }
+    }
+}
+.product-img{
+        margin: auto 0;
+        // overflow: hidden;
+        img{
+            max-width: 100%;
+        }
+}
+.product-title{
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: calc(36 / 26 *100%);
+
+}
+.title{
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44.2px;
+    @include tablet{
+        font-size: 40px;
+    }
+}
+.page{
+    flex: 1 1 auto;
+    
+}
+
+/*==========================================*/
+@import "_header.scss";
+/*==========================================*/
+@import "index.scss";
+/*==========================================*/
+@import "_footer.scss";
