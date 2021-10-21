@@ -1,0 +1,50 @@
+.aside {
+    border-right: 1px solid #707070;
+    &__container {
+        padding: 40px;
+        text-align: center;
+    }
+    &__logo {
+        // margin: 0 0 456px 0;
+        margin: 0 0 580px 0;
+        font-family: 'Tuffy';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 41px;
+        line-height: 61px;
+    }
+    &__social-networks {
+    }
+}
+.social-network {
+    display: flex;
+    margin: 0 0 32px 0;
+    flex-direction: column;
+    &:last-child{
+        margin: 0;
+    }
+    &__link {
+        transform: rotate(-90deg);
+    }
+}
+
+@include small-desktop-min{
+    .aside{
+        &__logo{
+            margin: 0 0 820px 0;
+        }
+    }
+}
+@include tablet{
+    .aside{
+        &__logo{
+            margin: 0 0 740px 0;
+        }
+    }
+}
+@include small-tablet{
+    .aside{
+        display: none;
+    }
+}
+

@@ -4,117 +4,177 @@
 /*==========================================*/
 
 $minwidth: 320px;
-$mw:1440;
-$md1:$mw+12;
-$md2:991.98;
-$md3:767.98;
-$md4:479.98;
+$mw: 1440;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
 
 /*==========================================*/
-html, body{
+html,
+body {
     padding: 0;
     margin: 0;
+    counter-reset: section;
 }
-body{
-    color:#fff;
+body {
+    color: #fff;
     background: #262628;
     font-size: 21px;
-    font-family: 'NotoSans';
+    font-family: "NotoSans";
     font-weight: 400;
 }
-body._lock{
+body._lock {
     overflow: hidden;
     @media (max-width: $md3+px) {
     }
 }
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
-ul{
-    list-style-type:none;
+ul {
+    list-style-type: none;
     padding: 0;
 }
-.wrapper{
+.wrapper {
     min-height: 100%;
     overflow: hidden;
 }
 /*==========================================*/
 
 ._container {
-    max-width: $mw+px;
+    max-width: $mw + px;
     margin: 0 auto;
-    @include small-desktop-min{
-        padding: 0 30px;
-    }
-    @include small-tablet{
-        max-width: none;
-        padding: 0 25px;
-    }
+    // @include small-desktop-min {
+    //      padding: 0 30px;
+    // }
+    // @include small-tablet {
+    //     max-width: none;
+    //     padding: 0 5px;
+    // }
 }
 // ===========================================================
-.text {
-    font-family: 'Hind Madurai';
-    font-style: normal;
-    font-weight: normal;
-    line-height: calc(27 / 18 * 100%);
-    
-    color: rgba(255, 255, 255, 0.6);
-}
+
 .btn {
-    background: #D23166;
+    background: #d23166;
     border-radius: 5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    
+
     padding: 13px 50px;
 
-    font-family: 'Hind Madurai';
+    font-family: "Hind Madurai";
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: calc(22 / 16 * 100%);
-    color: #FAFAFA;
+    color: #fafafa;
     transition: background 0.3s ease 0s;
-    @media (min-width:992px) {
-        &:hover{
+    @media (min-width: 992px) {
+        &:hover {
             background-color: #d00045;
         }
     }
 }
-.product-img{
-        margin: auto 0;
-        // overflow: hidden;
-        img{
-            max-width: 100%;
-        }
-}
-.product-title{
-    font-family: 'Hind Madurai';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: calc(36 / 26 *100%);
 
+.page {
+    flex: 1 1 auto;
 }
-.title{
-    font-family: 'Hind Madurai';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 44.2px;
-    @include tablet{
-        font-size: 40px;
+._container-aside {
+    max-width: 163px;
+    margin: 0 auto;
+}
+._container-info {
+    max-width: 1277px;
+    margin: 0 auto;
+}
+
+.info {
+}
+.number-block {
+    display: block;
+    &::before {
+        counter-increment: section;
+        content: "/ 0" counter(section);
+        font-size: 28px;
+        line-height: 143%;
+        letter-spacing: 0.1em;
     }
 }
-.page{
-    flex: 1 1 auto;
-    
+.line {
+    margin: 8px 0 24px 0;
+    display: flex;
+    max-width: 320px;
+    width: 100%;
+    height: 1px;
+    &__selected {
+        width: 160px;
+        background: #efc862;
+    }
+    &__primary {
+        width: 160px;
+        background: #707070;
+    }
 }
+.content {
+}
+.title {
+    font-family: "Tuffy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 100%;
+
+    text-transform: uppercase;
+}
+.text {
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 143%;
+    letter-spacing: 0.1em;
+}
+
+@include tablet {
+    .title {
+        font-size: 56px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+@include small-tablet {
+    .title {
+        font-size: 46px;
+    }
+    .text {
+        font-size: 16px;
+    }
+}
+@include mobile {
+    .title {
+        font-size: 36px;
+    }
+    .text {
+        font-size: 14px;
+    }
+}
+@include mobile-medium {
+    .text {
+        font-size: 12px;
+    }
+}
+
 
 /*==========================================*/
 @import "_header.scss";
 /*==========================================*/
-@import "index.scss";
+@import "_index.scss";
+@import "_aside.scss";
+@import "_sectionfooter.scss";
+
 /*==========================================*/
 @import "_footer.scss";

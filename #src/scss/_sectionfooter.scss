@@ -1,0 +1,126 @@
+.event-footer {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(40px);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+    &__events {
+        // margin: 0 182px 0 0;
+        width: 75%;
+    }
+    &__title {
+    }
+    &__text {
+    }
+    &__text-name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.2em;
+        color: #a1a1a1;
+        margin: 0 0 8px 0;
+    }
+    &__text-data {
+    }
+    &__image {
+        margin: 0 24px 0 0;
+        img {
+            // width: 100%;
+            // height: auto;
+        }
+    }
+    &__news {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__new {
+    }
+    &__read {
+        a{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #efc862;
+        }
+    }
+}
+
+.block-event {
+    padding: 38px 0 0 0;
+}
+.event-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 137%;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin: 0 0 24px 0;
+}
+.event-text {
+    margin: 0 0 24px 0;
+    font-size: 13px;
+    line-height: 138%;
+    letter-spacing: 0.2em;
+    color: #a1a1a1;
+}
+.event-data {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 137%;
+    letter-spacing: 0.2em;
+}
+@include small-desktop-min {
+    .event-footer {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            padding: 38px 40px;
+        }
+        &__events {
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__image {
+            img {
+                width: 100%;
+                height: auto;
+                min-width: 130px;
+            }
+        }
+    }
+    .block-event {
+        padding: 0;
+    }
+}
+@include small-tablet {
+    .title {
+        font-size: 46px;
+    }
+    .text {
+        font-size: 16px;
+    }
+}
+@include mobile {
+    .event-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 137%;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        margin: 0 0 16px 0;
+    }
+    
+    .event-text {
+        font-size: 11px;
+        margin: 0 0 16px 0;
+    }
+    .event-data {
+        font-size: 14px;
+    }
+}

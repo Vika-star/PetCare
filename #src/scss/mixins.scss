@@ -8,6 +8,11 @@
       @content;
     }
   }
+@mixin mobile-medium {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  }
   // тут мои 369 ниже 360-575
   @mixin mobile {
     @media screen and (max-width: 575px) {
