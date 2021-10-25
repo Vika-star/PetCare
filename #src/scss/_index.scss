@@ -5,6 +5,7 @@
 }
 
 .main-block {
+    width: 100%;
 }
 .background {
     position: absolute;
@@ -103,6 +104,7 @@
     }
 }
 
+
 @include small-desktop-min {
     .info-cat {
         &__text-content {
@@ -117,22 +119,13 @@
             width: 100%;
         }
     }
-    .info-dog {
-        &__text-content {
-            display: flex;
-            flex-direction: column;
-            padding: 100px 115px 50px 50px;
-        }
-        &__info {
-            margin: 0 0 140px 0;
-        }
-        &__content {
-            width: 100%;
-        }
-    }
+
     .background {
-        img {
+        &__cat{
             padding: 0;
+        }
+        &__dog{
+            padding: 140px 0 0 0;
         }
     }
 }
@@ -149,20 +142,30 @@
             margin: 0;
         }
     }
+
+    .background {
+        &__cat{
+            padding: 200px 0 0 0;
+        }
+        &__dog{
+            padding: 300px 0 0 0;
+        }
+    }
     .info-dog {
         &__text-content {
             display: flex;
-            flex-direction: column;
-            padding: 80px 115px 340px 50px;
+            justify-content: space-between;
+            padding: 100px 115px 450px 84px;
         }
         &__info {
             display: none;
-            margin: 0;
         }
-    }
-    .background {
-        img {
-            padding: 200px 0 0 0;
+        &__content {
+            width: 100%;
+        }
+        &__title {
+            margin: 0 0 24px 0;
+            text-align: center;
         }
     }
 }
@@ -185,9 +188,7 @@
             width: 100%;
         }
     }
-    .info-dog{
-        @extend .info-cat;
-    }
+    
 }
 @include mobile {
     .info-cat {
@@ -198,17 +199,15 @@
             width: 100%;
         }
     }
-    .info-dog{
-        &__text-content {
-            padding: 50px 50px 200px 50px;
-        }
-        &__content {
-            width: 100%;
-        }
-    }
+    
     .background {
         img {
             padding: 250px 0 0 0;
+        }
+    }
+    .info-dog {
+        &__text-content {
+            padding: 100px 50px 250px 50px;
         }
     }
 }
@@ -222,6 +221,11 @@
         }
         &__content {
             width: 100%;
+        }
+    }
+    .info-dog {
+        &__text-content {
+            padding: 50px 50px 250px 50px;
         }
     }
 }

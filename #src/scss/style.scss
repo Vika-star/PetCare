@@ -57,24 +57,23 @@ ul {
 // ===========================================================
 
 .btn {
-    background: #d23166;
-    border-radius: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    padding: 13px 50px;
+    padding: 7px 45px;
 
-    font-family: "Hind Madurai";
-    font-style: normal;
-    font-weight: bold;
     font-size: 16px;
-    line-height: calc(22 / 16 * 100%);
-    color: #fafafa;
+    line-height: 143%;
+    
+
     transition: background 0.3s ease 0s;
     @media (min-width: 992px) {
         &:hover {
-            background-color: #d00045;
+            background-color: #EDB506;
+            border: 1px solid #EDB506;
         }
     }
 }
@@ -94,6 +93,9 @@ ul {
 .info {
 }
 .number-block {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0.1em;
     display: block;
     &::before {
         counter-increment: section;
@@ -117,6 +119,10 @@ ul {
         width: 160px;
         background: #707070;
     }
+    &__white {
+        width: 160px;
+        background: #ffffff;
+    }
 }
 .content {
 }
@@ -137,6 +143,30 @@ ul {
     line-height: 143%;
     letter-spacing: 0.1em;
 }
+
+
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-container iframe,  
+.iframe-container object,  
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-wrapper {
+    width: 651px;
+    max-width: 100%;
+}
+
 
 @include tablet {
     .title {
@@ -175,6 +205,9 @@ ul {
 @import "_index.scss";
 @import "_aside.scss";
 @import "_sectionfooter.scss";
+@import "_news.scss";
+@import "_article.scss";
+@import "_location.scss";
 
 /*==========================================*/
 @import "_footer.scss";

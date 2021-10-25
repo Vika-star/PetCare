@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="shortcut icon" href="./img/icon/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+
+            <div class="main-section">
+                <div class="main-section__container _container">
+                    @@include('_aside.html')
+                    <div class="main-block">
+                        @@include('_header.html')
+                        <section class="news">
+                            <div class="news__container _container-info">
+                                <div class="news__title title">
+                                    news
+                                </div>
+                                <div class="news__content">
+                                    <div class="news__item">
+                                        <div class="news__image">
+                                            <img src="./img/news/01.png" alt="">
+                                        </div>
+                                        <div class="news__card card">
+                                            <div class="card__title">
+                                                Dog News
+                                            </div>
+                                            <div class="card__text">
+                                                How long should a dog walk be?
+                                                The length of a dog walk will depend on your dog’s fitness, age, breed,
+                                                size and if they have any medical conditions.
+                                            </div>
+                                            <a href="newsdog.html" class="card__btn btn">news</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="news__item">
+                                        <div class="news__image">
+                                            <img src="./img/news/02.png" alt="">
+                                        </div>
+                                        <div class="news__card card">
+                                            <div class="card__title">
+                                                Cat News
+                                            </div>
+                                            <div class="card__text">
+                                                Why monitoring your cat's drinking is important.
+                                                Vets agree that a change in drinking behaviour is the most concerning
+                                                health indicator in middle aged and senior cats
+                                            </div>
+
+                                            <a href="newscat.html" class="card__btn btn">news</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            @@include('_sectionfooter.html')
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    @@include('_footer.html')
+    @@include('js.html')
+</body>
+
+</html>
