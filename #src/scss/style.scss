@@ -26,7 +26,7 @@ body {
 }
 body._lock {
     overflow: hidden;
-    @media (max-width: $md3+px) {
+    @media (max-width: 767.98px) {
     }
 }
 a {
@@ -208,6 +208,7 @@ ul {
 @import "_news.scss";
 @import "_article.scss";
 @import "_location.scss";
+@import "_about.scss";
 
 /*==========================================*/
 @import "_footer.scss";

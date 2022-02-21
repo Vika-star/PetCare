@@ -88,6 +88,35 @@ if(menuLinks.length > 0){
   }
 }
 
+
+
+let telegramNotificationButton = document.getElementById('telegram-notification');
+telegramNotificationButton.addEventListener('click', function () {
+  let nameInput = document.getElementById('name');
+  let emailInput = document.getElementById('email');
+  let messageText = document.getElementById('messageText');
+
+  if (IsValidInput(nameInput) && IsValidInput(emailInput) && IsValidInput(messageText)) {
+    let text = `name: ${nameInput.value} email: ${emailInput.value} ${messageText.value}`;
+    sendOpinion(text);
+  }
+});
+
+function IsValidInput(input)
+{
+  return input.validity.valid;
+}
+
+function sendOpinion(str) {
+  var xmlHttp = new XMLHttpRequest();
+  var token = "2120820400:AAEowfh5hX8IerqvBcB13u6ozdqEIfHJfeQ";
+  var chat_id = 734769001;
+  xmlHttp.open("GET", 'https://api.telegram.org/bot' + token
+    + '/sendMessage?text=' + str
+    + '&chat_id=' + chat_id, false); // false for synchronous request
+  xmlHttp.send(null);
+}
+
 // const swiper = new Swiper('.swiper', {
 //   // Optional parameters
 //   direction: 'horizontal',

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="shortcut icon" href="./img/icon/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <main class="page">
+
+            <div class="main-section">
+                <div class="main-section__container _container">
+                    @@include('_aside.html')
+                    <div class="main-block">
+                        @@include('_header.html')
+                        <section class="block-about">
+                            <div class="block-about__container _container-info">
+                                <div class="block-about__title title">
+                                    about us
+                                </div>
+                                <div class="block-about__content">
+                                    <div class="block-about__item">
+                                        <div class="block-about__item-texts">
+                                            <div class="block-about__number number-block">
+                                                <div class="block-about__line line">
+                                                    <div class="line__selected"></div>
+                                                    <div class="line__primary"></div>
+                                                </div>
+                                            </div>
+                                            <div class="block-about__texts">
+                                                <div class="block-about__logo">
+                                                    PET
+                                                </div>
+                                                <div class="block-about__about-site">
+                                                    <span>Pet</span> &ndash; this is an organization that helps with the
+                                                    care of animals. Gives advice on how to properly wash the animal,
+                                                    which food is better to choose and how much time you need to walk
+                                                    with your animal.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-about__image">
+                                            <img src="./img/about/main.gif" alt="">
+                                        </div>
+                                        <!-- <div class="block-about__button">
+                                            <a href="" class="block-about__link">Read more</a>
+                                        </div> -->
+                                    </div>
+                                    <div class="block-about__item">
+                                        <div class="block-about__item-texts">
+                                            <div class="block-about__number number-block">
+                                                <div class="block-about__line line">
+                                                    <div class="line__selected"></div>
+                                                    <div class="line__primary"></div>
+                                                </div>
+                                            </div>
+                                            <div class="block-about__texts">
+                                                <div class="block-about__online-people">
+                                                    <div class="block-about__online">
+                                                        people have pets
+                                                    </div>
+                                                    2,667,145
+                                                </div>
+                                                <div class="block-about__btn">
+                                                    <a href="article.html" class="btn">Article</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-about__forms forms-contact">
+                                            <div class="forms-contact__title">
+                                                Send your comment
+                                            </div>
+                                            <form name="contactus" action="">
+                                                <div class="forms-contact__name">
+                                                    <label for="name" class="forms-contact__title-input">Name:</label>
+                                                    <input type="text" name="name" id="name" placeholder="Name"
+                                                        required="">
+                                                </div>
+                                                <div class="forms-contact__email">
+                                                    <label for="email"
+                                                        class="forms-contact__title-input">E-mail:</label>
+                                                    <input type="email" name="email" id="email" placeholder="E-mail"
+                                                        required="">
+                                                </div>
+                                                <div class="forms-contact__texts">
+                                                    <label for="message"
+                                                        class="forms-contact__title-input">Message:</label>
+                                                    <textarea name="message" id="messageText" cols="30" rows="5"
+                                                        placeholder="Message" required=""></textarea>
+                                                </div>
+                                                <div class="forms-contact__buttons">
+                                                    <div class="forms-contact__cancel">
+                                                        <input type="reset" value="Cancel">
+                                                    </div>
+                                                    <div class="forms-contact__send" id="telegram-notification">
+                                                        <input type="submit" value="Send">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- <div class="block-about__button">
+                                            <a href="" class="block-about__link">Read more</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('_sectionfooter.html')
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    @@include('_footer.html')
+    @@include('js.html')
+</body>
+
+</html>
